@@ -1,7 +1,6 @@
 FROM hypriot/rpi-alpine
 
-RUN apk add --update python3 python3-pip
-
-RUN pip3 install homeassistant
+RUN apk add --update build-base libffi-dev openssl-dev python3 python3-dev libxml2 libxml2-dev libxslt libxslt-dev
+RUN python3 -m pip install homeassistant
 
 CMD ["python3", "-m", "homeassistant", "--config", "/config"]
