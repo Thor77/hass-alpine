@@ -1,4 +1,4 @@
-FROM hypriot/rpi-alpine
+FROM arm32v7/alpine
 
 RUN apk add --update build-base libffi-dev openssl-dev python3 python3-dev libxml2 libxml2-dev libxslt libxslt-dev
 RUN python3 -m pip install homeassistant==0.84.6 fritzconnection==0.6.5
